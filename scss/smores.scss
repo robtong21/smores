@@ -1,9 +1,9 @@
-@import 'variables.scss';
-@import 'mixins.scss';
+@import 'variables';
+@import 'mixins';
 body {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   position: relative;
-  width: 1024px;
+  width: $width;
   height: 100%;
   color: white;
   background-color: black;
@@ -216,10 +216,26 @@ a {
   background-color: #8B572A;
 }
 
+#about .container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .about-img {
   height: 150px;
   width: 97px;
   padding-bottom: 12px;
+}
+
+.col-md-4 {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 94px;
+  margin-left: 0px;
+}
+
+.col-md-4:last-child {
+  margin-right: 0px;
 }
 
 .download-section {
@@ -238,7 +254,7 @@ a {
 }
 @media(min-width:992px) {
   .container {
-    max-width: 1024px;
+    max-width: $width;
   }
   #map {
     height: 350px;

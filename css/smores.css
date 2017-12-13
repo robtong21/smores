@@ -1,3 +1,4 @@
+/*$col-md: for !default */
 body {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   position: relative;
@@ -158,10 +159,23 @@ a {
   padding-right: 76px;
   background-color: #8B572A; }
 
+#about .container {
+  padding-left: 0px;
+  padding-right: 0px; }
+
 .about-img {
   height: 150px;
   width: 97px;
   padding-bottom: 12px; }
+
+.col-md-4 {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 94px;
+  margin-left: 0px; }
+
+.col-md-4:last-child {
+  margin-right: 0px; }
 
 .download-section {
   color: white;
