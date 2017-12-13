@@ -94,6 +94,12 @@ a {
 .navbar {
   padding: initial; }
 
+.fixed-top {
+  position: absolute; }
+
+#body {
+  height: 1710px; }
+
 .container {
   padding-left: 30px;
   padding-right: 30px; }
