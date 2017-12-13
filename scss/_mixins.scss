@@ -1,11 +1,10 @@
 //  Mixins
 
 /*$col-md: for !default */
-
 @mixin make-cols($size) {
   @for $i from 1 through 12 {
       .col-md-#{$i} {
-          width: ((($width-76-76-94-94)/12) * $i) - 1;
+          width: (((1024-76-76-94-94)/12) * $i) - 1 + 0px;
       }
   }
 }

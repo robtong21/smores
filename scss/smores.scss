@@ -1,7 +1,7 @@
 @import 'variables';
-@import 'mixins';
+
 body {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: $sans-serif;
   position: relative;
   width: $width;
   height: 100%;
@@ -22,24 +22,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Abril Fatface', serif;
-  font-weight: 700;
-
+  font-family: $serif;
   margin: 0 0 35px;
-
   letter-spacing: 1px;
-  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 18px;
 }
 
 p {
   font-size: 16px;
   line-height: 1.5;
-
   margin: 0 0 25px;
   @media(min-width: 768px) {
-    font-size: 18px;
-    line-height: 1.6;
-
     margin: 0 0 35px;
   }
 }
@@ -48,28 +44,22 @@ a {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-
   color: $primary;
   &:focus,
   &:hover {
     text-decoration: none;
-
     color: darken($primary, 20%);
   }
 }
 
 #mainNav {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
+  font-family: $sans-serif;
   margin-bottom: 0;
-
   border-bottom: 1px solid fade-out(white, .7);
   background-color: black;
   .navbar-toggler {
     font-size: 14px;
-
     padding: 11px;
-
     color: white;
     border: 1px solid white;
   }
@@ -78,9 +68,15 @@ a {
   }
   .navbar-nav {
     .nav-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       -webkit-transition: background 0.3s ease-in-out;
       -moz-transition: background 0.3s ease-in-out;
       transition: background 0.3s ease-in-out;
+      .nav-link {
+        padding: 0;
+      }
       &:hover {
         color: fade(white, 80%);
         outline: none;
@@ -96,18 +92,15 @@ a {
   @media(min-width:992px) {
     padding-top: 30px;
     padding-bottom: 20px;
-
     -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
     -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
     transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
     letter-spacing: 1px;
-
     border-bottom: none;
     background: transparent;
     &.navbar-shrink {
       padding-top: 10px;
       padding-bottom: 10px;
-
       border-bottom: 1px solid fade-out(white, .7);
       background: black;
     }
@@ -141,13 +134,10 @@ a {
 
 .masthead {
   display: table;
-
   width: 100%;
   height: 684px;
   padding: 200px 0;
-
   text-align: center;
-
   color: white;
   background: url('../img/campfire.jpg') no-repeat bottom center scroll;
   background-color: rgba(0,0,0,.25);
@@ -170,12 +160,14 @@ a {
       font-size: 18px;
     }
   }
+  .intro-btn {
+    border: 3px solid #fff;
+  }
   @media(min-width:768px) {
     padding: 0;
     .intro-body {
       .brand-heading {
         font-size: 84px;
-        text-transform: none;
       }
       .intro-text {
         font-size: 22px;
@@ -213,45 +205,160 @@ a {
   padding-bottom: 55px;
   padding-left: 76px;
   padding-right: 76px;
-  background-color: #8B572A;
+  background-color: $brown;
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .row {
+    flex-wrap: initial;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .about-img {
+    height: 150px;
+    width: 97px;
+    padding-bottom: 12px;
+  }
+  @import 'mixins';
+  @include make-cols(md);
+  .col-md-4 {
+    margin-right: 94px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .col-md-4:last-child {
+    margin-right: 0;
+  }
+  @media only screen and (min-width: 768px) {
+    .col-md-4 {
+      flex: initial;
+    }
+  }
 }
 
-#about .container {
-  padding-left: 0px;
-  padding-right: 0px;
+#holy-smokes {
+  .smore {
+    height: 482px;
+    width: 512px;
+  }
+  .hs-section {
+    color: white;
+    background-color: black;
+    width: 50%;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 482px;
+    width: $width;
+  }
+  #holy-smokes .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  #hs1 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #hs2 {
+    width: 512px;
+    background-color: #fff;
+    padding: 90px 50px;
+  }
+  #hs2 h2 {
+    color: $brown;
+    font-family: $serif;
+    font-size: 48px;
+    margin: 0 0 15px;
+  }
+  #hs2 p {
+    color: $dark-text;
+    font-weight: 500;
+    margin: 0 0 15px;
+  }
+  .hs-btn {
+    color: $brown;
+    border: 3px solid $brown;
+  }
 }
 
-.about-img {
-  height: 150px;
-  width: 97px;
-  padding-bottom: 12px;
+#dip {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .dip-img {
+    height: 577px;
+    width: 1024px;
+  }
 }
 
-.col-md-4 {
-  padding-right: 0px;
-  padding-left: 0px;
-  margin-right: 94px;
-  margin-left: 0px;
-}
-
-.col-md-4:last-child {
-  margin-right: 0px;
-}
-
-.download-section {
-  color: white;
-  background: url('../img/downloads-bg.jpg') no-repeat center center scroll;
-  background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+footer {
+  .container {
+    padding: 0 15px;
+  }
+  .info-row {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-left: 30px;
+    padding-right: 0;
+    background-color: $brown;
+    color: #fff;
+  }
+  .col-md-8 {
+    width: 606px;
+    padding-left: 0;
+    padding-right: 90px;
+  }
+  @media only screen and (min-width: 768px) {
+    .col-md-8 {
+      flex: none;
+    }
+  }
+  .col-md-2 {
+    width: fit-content;
+    max-width: initial;
+    padding-left: 0;
+    padding-right: 90px;
+  }
+  .col-md-2:last-child {
+    width: fit-content;
+    padding-left: 0;
+    padding-right: 60px;
+  }
+  h4 {
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0;
+  }
+  p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  ul {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  li {
+    list-style-type: none;
+    padding-bottom: 12px;
+    width: max-content;
+  }
+  .copyright {
+    height: 50px;
+    background-color: #382412;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 #map {
   width: 100%;
   height: 300px;
 }
+
 @media(min-width:992px) {
   .container {
     max-width: $width;
@@ -265,13 +372,12 @@ a {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: $sans-serif;
+  font-weight: 500;
   font-size: 18px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  border: 3px solid #fff;
   border-radius: 100px; /* CSS3 */
   -moz-border-radius: 100px; /* Firefox */
 	-webkit-border-radius: 100px; /* Safari, Chrome */
@@ -280,6 +386,7 @@ a {
 .nav-item .btn {
   width: 116px;
   height: 35px;
+  border: 3px solid #fff;
 }
 
 .brand-heading .btn {
@@ -315,15 +422,6 @@ ul.banner-social-buttons {
         margin-bottom: 0;
       }
     }
-  }
-}
-
-footer {
-  padding: 50px 0;
-  p {
-    font-size: 14px;
-
-    margin: 0;
   }
 }
 

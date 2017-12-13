@@ -1,6 +1,5 @@
-/*$col-md: for !default */
 body {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
   width: 1024px;
   height: 100%;
@@ -19,11 +18,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Abril Fatface', serif;
-  font-weight: 700;
+  font-family: "Abril Fatface", serif;
   margin: 0 0 35px;
-  letter-spacing: 1px;
-  text-transform: uppercase; }
+  letter-spacing: 1px; }
+
+h4 {
+  font-size: 18px; }
 
 p {
   font-size: 16px;
@@ -31,8 +31,6 @@ p {
   margin: 0 0 25px; }
   @media (min-width: 768px) {
     p {
-      font-size: 18px;
-      line-height: 1.6;
       margin: 0 0 35px; } }
 
 a {
@@ -45,7 +43,7 @@ a {
     color: #cccccc; }
 
 #mainNav {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   background-color: black; }
@@ -57,9 +55,14 @@ a {
   #mainNav a {
     color: white; }
   #mainNav .navbar-nav .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
     transition: background 0.3s ease-in-out; }
+    #mainNav .navbar-nav .nav-item .nav-link {
+      padding: 0; }
     #mainNav .navbar-nav .nav-item:hover {
       color: fade(white, 80%);
       outline: none;
@@ -125,12 +128,13 @@ a {
       padding-bottom: 20px; }
     .masthead .intro-body .intro-text {
       font-size: 18px; }
+  .masthead .intro-btn {
+    border: 3px solid #fff; }
   @media (min-width: 768px) {
     .masthead {
       padding: 0; }
       .masthead .intro-body .brand-heading {
-        font-size: 84px;
-        text-transform: none; }
+        font-size: 84px; }
       .masthead .intro-body .intro-text {
         font-size: 22px; } }
 
@@ -157,34 +161,159 @@ a {
   padding-bottom: 55px;
   padding-left: 76px;
   padding-right: 76px;
-  background-color: #8B572A; }
+  background-color: #8B572A;
+  /*$col-md: for !default */ }
+  #about .container {
+    padding-left: 0px;
+    padding-right: 0px; }
+  #about .row {
+    flex-wrap: initial;
+    margin-right: 0;
+    margin-left: 0; }
+  #about .about-img {
+    height: 150px;
+    width: 97px;
+    padding-bottom: 12px; }
+  #about .col-md-1 {
+    width: 56px; }
+  #about .col-md-2 {
+    width: 113px; }
+  #about .col-md-3 {
+    width: 170px; }
+  #about .col-md-4 {
+    width: 227px; }
+  #about .col-md-5 {
+    width: 284px; }
+  #about .col-md-6 {
+    width: 341px; }
+  #about .col-md-7 {
+    width: 398px; }
+  #about .col-md-8 {
+    width: 455px; }
+  #about .col-md-9 {
+    width: 512px; }
+  #about .col-md-10 {
+    width: 569px; }
+  #about .col-md-11 {
+    width: 626px; }
+  #about .col-md-12 {
+    width: 683px; }
+  #about .col-md-4 {
+    margin-right: 94px;
+    padding-right: 0;
+    padding-left: 0; }
+  #about .col-md-4:last-child {
+    margin-right: 0; }
+  @media only screen and (min-width: 768px) {
+    #about .col-md-4 {
+      flex: initial; } }
 
-#about .container {
-  padding-left: 0px;
-  padding-right: 0px; }
+#holy-smokes .smore {
+  height: 482px;
+  width: 512px; }
 
-.about-img {
-  height: 150px;
-  width: 97px;
-  padding-bottom: 12px; }
-
-.col-md-4 {
-  padding-right: 0px;
-  padding-left: 0px;
-  margin-right: 94px;
-  margin-left: 0px; }
-
-.col-md-4:last-child {
-  margin-right: 0px; }
-
-.download-section {
+#holy-smokes .hs-section {
   color: white;
-  background: url("../img/downloads-bg.jpg") no-repeat center center scroll;
   background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  width: 50%; }
+
+#holy-smokes .container {
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 482px;
+  width: 1024px; }
+
+#holy-smokes #holy-smokes .row {
+  margin-right: 0;
+  margin-left: 0; }
+
+#holy-smokes #hs1 {
+  padding-left: 0;
+  padding-right: 0; }
+
+#holy-smokes #hs2 {
+  width: 512px;
+  background-color: #fff;
+  padding: 90px 50px; }
+
+#holy-smokes #hs2 h2 {
+  color: #8B572A;
+  font-family: "Abril Fatface", serif;
+  font-size: 48px;
+  margin: 0 0 15px; }
+
+#holy-smokes #hs2 p {
+  color: #4A4A4A;
+  font-weight: 500;
+  margin: 0 0 15px; }
+
+#holy-smokes .hs-btn {
+  color: #8B572A;
+  border: 3px solid #8B572A; }
+
+#dip .container {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+#dip .dip-img {
+  height: 577px;
+  width: 1024px; }
+
+footer .container {
+  padding: 0 15px; }
+
+footer .info-row {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  padding-left: 30px;
+  padding-right: 0;
+  background-color: #8B572A;
+  color: #fff; }
+
+footer .col-md-8 {
+  width: 606px;
+  padding-left: 0;
+  padding-right: 90px; }
+
+@media only screen and (min-width: 768px) {
+  footer .col-md-8 {
+    flex: none; } }
+
+footer .col-md-2 {
+  width: fit-content;
+  max-width: initial;
+  padding-left: 0;
+  padding-right: 90px; }
+
+footer .col-md-2:last-child {
+  width: fit-content;
+  padding-left: 0;
+  padding-right: 60px; }
+
+footer h4 {
+  color: #fff;
+  padding-bottom: 15px;
+  margin: 0; }
+
+footer p {
+  font-size: 14px;
+  margin-bottom: 0; }
+
+footer ul {
+  padding: 0;
+  margin-bottom: 0; }
+
+footer li {
+  list-style-type: none;
+  padding-bottom: 12px;
+  width: max-content; }
+
+footer .copyright {
+  height: 50px;
+  background-color: #382412;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 #map {
   width: 100%;
@@ -200,13 +329,12 @@ a {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
   font-size: 18px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  border: 3px solid #fff;
   border-radius: 100px;
   /* CSS3 */
   -moz-border-radius: 100px;
@@ -216,7 +344,8 @@ a {
 
 .nav-item .btn {
   width: 116px;
-  height: 35px; }
+  height: 35px;
+  border: 3px solid #fff; }
 
 .brand-heading .btn {
   width: 192px;
@@ -244,12 +373,6 @@ ul.banner-social-buttons {
       padding: 0; }
       ul.banner-social-buttons li:last-child {
         margin-bottom: 0; } }
-
-footer {
-  padding: 50px 0; }
-  footer p {
-    font-size: 14px;
-    margin: 0; }
 
 ::-moz-selection {
   background: #fcfcfc;
