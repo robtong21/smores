@@ -31,7 +31,7 @@ gulp.task('sass', function() {
 
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], function() {
-  return gulp.src('css/grayscale.css')
+  return gulp.src('css/smores.css')
     .pipe(cleanCSS({
       compatibility: 'ie8'
     }))

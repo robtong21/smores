@@ -1,0 +1,336 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+body {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: relative;
+  width: 1024px;
+  height: 100%;
+  color: white;
+  background-color: black;
+  line-height: 1;
+  margin: 0 auto;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Abril Fatface', serif;
+  font-weight: 700;
+
+  margin: 0 0 35px;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+
+  margin: 0 0 25px;
+  @media(min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.6;
+
+    margin: 0 0 35px;
+  }
+}
+
+a {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
+  color: $primary;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+
+    color: darken($primary, 20%);
+  }
+}
+
+#mainNav {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  margin-bottom: 0;
+
+  border-bottom: 1px solid fade-out(white, .7);
+  background-color: black;
+  .navbar-toggler {
+    font-size: 14px;
+
+    padding: 11px;
+
+    color: white;
+    border: 1px solid white;
+  }
+  a {
+    color: white;
+  }
+  .navbar-nav {
+    .nav-item {
+      -webkit-transition: background 0.3s ease-in-out;
+      -moz-transition: background 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out;
+      &:hover {
+        color: fade(white, 80%);
+        outline: none;
+        background-color: transparent;
+      }
+      &:active,
+      &:focus {
+        outline: none;
+        background-color: transparent;
+      }
+    }
+  }
+  @media(min-width:992px) {
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+    -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+    transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+    letter-spacing: 1px;
+
+    border-bottom: none;
+    background: transparent;
+    &.navbar-shrink {
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      border-bottom: 1px solid fade-out(white, .7);
+      background: black;
+    }
+    .nav-link.active {
+      outline: none;
+      background-color: rgba(white, .3);
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.navbar {
+  padding: initial;
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  padding-top: 0;
+}
+
+.nav-link {
+  display: inline-block;
+}
+
+.masthead {
+  display: table;
+
+  width: 100%;
+  height: 684px;
+  padding: 200px 0;
+
+  text-align: center;
+
+  color: white;
+  background: url('../img/campfire.jpg') no-repeat bottom center scroll;
+  background-color: rgba(0,0,0,.25);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  .intro-body {
+    display: table-cell;
+
+    vertical-align: middle;
+    .brand-heading {
+      font-size: 50px;
+    }
+    h1 {
+      margin: 0;
+      padding-bottom: 20px;
+    }
+    .intro-text {
+      font-size: 18px;
+    }
+  }
+  @media(min-width:768px) {
+    padding: 0;
+    .intro-body {
+      .brand-heading {
+        font-size: 84px;
+        text-transform: none;
+      }
+      .intro-text {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.btn-circle {
+  font-size: 26px;
+
+  width: 55px;
+  height: 55px;
+  margin-top: 15px;
+  line-height: 45px;
+
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+
+  color: white;
+  border: 2px solid white;
+  border-radius: 100% !important;
+  background: transparent;
+  &:focus,
+  &:hover {
+    color: white;
+    outline: none;
+    background: fade-out(white, .9);
+  }
+}
+
+#about {
+  padding-top: 40px;
+  padding-bottom: 55px;
+  padding-left: 76px;
+  padding-right: 76px;
+  background-color: #8B572A;
+}
+
+.about-img {
+  height: 150px;
+  width: 97px;
+  padding-bottom: 12px;
+}
+
+.download-section {
+  color: white;
+  background: url('../img/downloads-bg.jpg') no-repeat center center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+}
+@media(min-width:992px) {
+  .container {
+    max-width: 1024px;
+  }
+  #map {
+    height: 350px;
+  }
+}
+
+.btn {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border: 3px solid #fff;
+  border-radius: 100px; /* CSS3 */
+  -moz-border-radius: 100px; /* Firefox */
+	-webkit-border-radius: 100px; /* Safari, Chrome */
+}
+
+.nav-item .btn {
+  width: 116px;
+  height: 35px;
+}
+
+.brand-heading .btn {
+  width: 192px;
+  height: 47px;
+}
+
+.btn-default {
+  color: $primary;
+  border: 1px solid $primary;
+  background-color: transparent;
+  &:focus,
+  &:hover {
+    color: black;
+    border: 1px solid $primary;
+    outline: none;
+    background-color: $primary;
+  }
+}
+
+ul.banner-social-buttons {
+  margin-top: 0;
+  @media(max-width: 1199px) {
+    margin-top: 15px;
+  }
+  @media(max-width:767px) {
+    li {
+      display: block;
+
+      margin-bottom: 20px;
+      padding: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 50px 0;
+  p {
+    font-size: 14px;
+
+    margin: 0;
+  }
+}
+
+::-moz-selection {
+  background: #fcfcfc;
+  background: fade-out(white, .8);
+  text-shadow: none;
+}
+
+::selection {
+  background: #fcfcfc;
+  background: fade-out(white, .8);
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+body {
+  -webkit-tap-highlight-color: fade-out(white, .8);
+}

@@ -1,26 +1,15 @@
 {
-  "title": "Grayscale",
-  "name": "startbootstrap-grayscale",
-  "version": "4.0.0-beta.2",
-  "description": "A grayscale one page HTML theme for Bootstrap.",
+  "title": "Smores",
+  "name": "smores",
+  "version": "0.1.0",
+  "description": "Small marketing-type web page from a design mockup",
   "keywords": [
-    "css",
-    "sass",
-    "html",
-    "responsive",
-    "theme",
-    "template"
+    "rightnow",
+    "smores"
   ],
-  "homepage": "https://startbootstrap.com/template-overviews/grayscale",
-  "bugs": {
-    "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale/issues",
-    "email": "feedback@startbootstrap.com"
+  "scripts": {
+    "build-css": "node-sass -w scss/smores.scss -o css/"
   },
-  "license": "MIT",
-  "author": "Start Bootstrap",
-  "contributors": [
-    "David Miller (http://davidmiller.io/)"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
@@ -29,7 +18,10 @@
     "bootstrap": "^4.0.0-beta.2",
     "font-awesome": "4.7.0",
     "jquery": "^3.2.1",
-    "jquery.easing": "^1.4.1"
+    "jquery.easing": "^1.4.1",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.12.5",
+    "popper.js": "^1.12.9"
   },
   "devDependencies": {
     "browser-sync": "2.18.13",

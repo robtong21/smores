@@ -1,0 +1,257 @@
+body {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: relative;
+  width: 1024px;
+  height: 100%;
+  color: white;
+  background-color: black;
+  line-height: 1;
+  margin: 0 auto; }
+
+html {
+  width: 100%;
+  height: 100%; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Abril Fatface', serif;
+  font-weight: 700;
+  margin: 0 0 35px;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 25px; }
+  @media (min-width: 768px) {
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0 0 35px; } }
+
+a {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #fff; }
+  a:focus, a:hover {
+    text-decoration: none;
+    color: #cccccc; }
+
+#mainNav {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: black; }
+  #mainNav .navbar-toggler {
+    font-size: 14px;
+    padding: 11px;
+    color: white;
+    border: 1px solid white; }
+  #mainNav a {
+    color: white; }
+  #mainNav .navbar-nav .nav-item {
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out; }
+    #mainNav .navbar-nav .nav-item:hover {
+      color: fade(white, 80%);
+      outline: none;
+      background-color: transparent; }
+    #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+      outline: none;
+      background-color: transparent; }
+  @media (min-width: 992px) {
+    #mainNav {
+      padding-top: 30px;
+      padding-bottom: 20px;
+      -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      letter-spacing: 1px;
+      border-bottom: none;
+      background: transparent; }
+      #mainNav.navbar-shrink {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        background: black; }
+      #mainNav .nav-link.active {
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.3); }
+        #mainNav .nav-link.active:hover {
+          color: white; } }
+
+.navbar {
+  padding: initial; }
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.navbar-brand {
+  font-size: 24px;
+  padding-top: 0; }
+
+.nav-link {
+  display: inline-block; }
+
+.masthead {
+  display: table;
+  width: 100%;
+  height: 684px;
+  padding: 200px 0;
+  text-align: center;
+  color: white;
+  background: url("../img/campfire.jpg") no-repeat bottom center scroll;
+  background-color: rgba(0, 0, 0, 0.25);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .masthead .intro-body {
+    display: table-cell;
+    vertical-align: middle; }
+    .masthead .intro-body .brand-heading {
+      font-size: 50px; }
+    .masthead .intro-body h1 {
+      margin: 0;
+      padding-bottom: 20px; }
+    .masthead .intro-body .intro-text {
+      font-size: 18px; }
+  @media (min-width: 768px) {
+    .masthead {
+      padding: 0; }
+      .masthead .intro-body .brand-heading {
+        font-size: 84px;
+        text-transform: none; }
+      .masthead .intro-body .intro-text {
+        font-size: 22px; } }
+
+.btn-circle {
+  font-size: 26px;
+  width: 55px;
+  height: 55px;
+  margin-top: 15px;
+  line-height: 45px;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  color: white;
+  border: 2px solid white;
+  border-radius: 100% !important;
+  background: transparent; }
+  .btn-circle:focus, .btn-circle:hover {
+    color: white;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1); }
+
+#about {
+  padding-top: 40px;
+  padding-bottom: 55px;
+  padding-left: 76px;
+  padding-right: 76px;
+  background-color: #8B572A; }
+
+.about-img {
+  height: 150px;
+  width: 97px;
+  padding-bottom: 12px; }
+
+.download-section {
+  color: white;
+  background: url("../img/downloads-bg.jpg") no-repeat center center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+#map {
+  width: 100%;
+  height: 300px; }
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 1024px; }
+  #map {
+    height: 350px; } }
+
+.btn {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border: 3px solid #fff;
+  border-radius: 100px;
+  /* CSS3 */
+  -moz-border-radius: 100px;
+  /* Firefox */
+  -webkit-border-radius: 100px;
+  /* Safari, Chrome */ }
+
+.nav-item .btn {
+  width: 116px;
+  height: 35px; }
+
+.brand-heading .btn {
+  width: 192px;
+  height: 47px; }
+
+.btn-default {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent; }
+  .btn-default:focus, .btn-default:hover {
+    color: black;
+    border: 1px solid #fff;
+    outline: none;
+    background-color: #fff; }
+
+ul.banner-social-buttons {
+  margin-top: 0; }
+  @media (max-width: 1199px) {
+    ul.banner-social-buttons {
+      margin-top: 15px; } }
+  @media (max-width: 767px) {
+    ul.banner-social-buttons li {
+      display: block;
+      margin-bottom: 20px;
+      padding: 0; }
+      ul.banner-social-buttons li:last-child {
+        margin-bottom: 0; } }
+
+footer {
+  padding: 50px 0; }
+  footer p {
+    font-size: 14px;
+    margin: 0; }
+
+::-moz-selection {
+  background: #fcfcfc;
+  background: rgba(255, 255, 255, 0.2);
+  text-shadow: none; }
+
+::selection {
+  background: #fcfcfc;
+  background: rgba(255, 255, 255, 0.2);
+  text-shadow: none; }
+
+img::selection {
+  background: transparent; }
+
+img::-moz-selection {
+  background: transparent; }
+
+body {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2); }
