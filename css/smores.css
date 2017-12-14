@@ -194,8 +194,8 @@ a {
   background-color: #8B572A;
   /*$col-md: for !default */ }
   #about .container {
-    padding-left: 0px;
-    padding-right: 0px; }
+    padding-left: 0;
+    padding-right: 0; }
   #about .row {
     flex-wrap: initial;
     margin-right: 0;
@@ -359,9 +359,11 @@ footer .copyright {
 
 @media (min-width: 992px) {
   .container {
-    max-width: 1024px; }
-  #map {
-    height: 350px; } }
+    max-width: 1024px; } }
+
+@media only screen and (max-width: 992px) {
+  .fixed-top {
+    width: 100vw; } }
 
 ::-moz-selection {
   background: #fcfcfc;
